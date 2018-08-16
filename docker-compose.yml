@@ -1,0 +1,8 @@
+php7:
+  container_name: php7
+  build: .
+  ports:
+    - "9086:80"
+    - "9089:443"
+  volumes:
+    - ./www:/var/www/html

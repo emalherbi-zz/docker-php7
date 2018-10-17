@@ -1,8 +1,26 @@
-php7:
+php:
   container_name: php7
   build: .
+  links:
+    - db
   ports:
     - "9086:80"
     - "9089:443"
   volumes:
-    - ./www:/var/www/html
+    - /home/eduardo/Sites/docker/www:/var/www/html
+db:
+  container_name: db7
+  image: mariadb
+  ports:
+    - "9088:3306"
+  environment:
+    MYSQL_ROOT_PASSWORD: root
+    MYSQL_USER: root
+    MYSQL_PASSWORD: root
+phpmyadmin:
+ container_name: phpmyadmin7
+ image: phpmyadmin/phpmyadmin
+ links:
+   - db
+ ports:
+   - "9087:80"    

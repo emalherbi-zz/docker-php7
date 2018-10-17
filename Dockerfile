@@ -51,7 +51,4 @@ RUN apt-get install -y locales && echo "en_US.UTF-8 UTF-8" > /etc/locale.gen && 
 EXPOSE 80
 EXPOSE 443
 
-# 000-default.conf to change apache site settings.
-ADD 000-default.conf /etc/apache2/sites-available/
-
 CMD ["/usr/sbin/apache2ctl", "-D", "FOREGROUND"]

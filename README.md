@@ -1,6 +1,6 @@
 # docker-php
 
-Docker && Ubuntu 16.04 && Php && Sqlsrv && Mysqli
+Docker && Ubuntu 16.04 && Apache2 && Php && Mysqli && Sqlsrv && PhpMyAdmin
 
 ## Requirements
 
@@ -10,14 +10,19 @@ Docker && Ubuntu 16.04 && Php && Sqlsrv && Mysqli
 ## About this docker's settings
 
 - ubuntu:16.04
-- php 7.0
+- apache2
+- php 7
 - sqlsrv
 - mysqli
+
+## Before installation
+
+Before installation change this [line](https://github.com/emalherbi/docker-php-7/blob/master/docker-compose.yml#L8).
 
 ## Installation
 
 ```bash
-docker-compose up -d --build --force-recreate
+docker-compose up -d --build --force-recreate --remove-orphans
 ```
 
 ## Document Root

@@ -25,15 +25,14 @@ Before installation change this [line](https://github.com/emalherbi/docker-php-7
 docker-compose up -d --build --force-recreate --remove-orphans
 ```
 
-## Document Root
-
-```
-www
-|- index-info.php
-```
-
 ## Server Root
 
 ```
 localhost:9086
+```
+
+## PhpMyAdmin
+
+```
+localhost:9087
 ```

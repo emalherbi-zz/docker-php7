@@ -17,7 +17,7 @@ Docker && Ubuntu 16.04 && Apache2 && Php && Mysqli && Sqlsrv && PhpMyAdmin
 
 ## Before installation
 
-Before installation change this [line](https://github.com/emalherbi/docker-php-7/blob/master/docker-compose.yml#L8).
+Before installation change this [line](https://github.com/emalherbi/docker-php-7/blob/master/docker-compose.yml#L10).
 
 ## Installation
 

@@ -48,6 +48,12 @@ RUN exec bash
 # install locales
 RUN apt-get install -y locales && echo "en_US.UTF-8 UTF-8" > /etc/locale.gen && locale-gen
 
+# rewrite
+RUN a2enmod rewrite
+
+# 000-default.conf to change apache site settings.
+ADD 000-default.conf /etc/apache2/sites-available/
+
 EXPOSE 80
 EXPOSE 443
 

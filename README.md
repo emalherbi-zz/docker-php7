@@ -1,6 +1,6 @@
 # docker-php
 
-Docker && Ubuntu 16.04 && Apache2 && Php && Mysqli && Sqlsrv && PhpMyAdmin
+Docker && Ubuntu 17.10 && Apache2 && Php && Mysqli && Sqlsrv && PhpMyAdmin
 
 ## Requirements
 
@@ -9,15 +9,20 @@ Docker && Ubuntu 16.04 && Apache2 && Php && Mysqli && Sqlsrv && PhpMyAdmin
 
 ## About this docker's settings
 
-- ubuntu:16.04
+- ubuntu:17.10
 - apache2
-- php 7
+- php 7.1
 - sqlsrv
 - mysqli
 
 ## Before installation
 
 Before installation change this [line](https://github.com/emalherbi/docker-php-7/blob/master/docker-compose.yml#L10).
+
+```yml
+volumes:
+  - /home/eduardo/Sites/docker/www:/var/www/html
+```
 
 ## Installation
 

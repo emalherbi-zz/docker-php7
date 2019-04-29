@@ -17,8 +17,8 @@ RUN apt-get update
 RUN apt-get install -y php7.1 mcrypt php7.1-mcrypt php-mbstring php-pear php7.1-dev php7.1-xml
 RUN apt-get install -y libapache2-mod-php7.1
 
-# install soap and curl
-RUN apt-get install -y libxml2-dev php-soap php-curl
+# install soap and curl and gd
+RUN apt-get install -y libxml2-dev php-soap php-curl php-gd
 
 # install mysql
 RUN apt-get update

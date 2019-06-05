@@ -1,6 +1,6 @@
 # docker-php
 
-Docker && Ubuntu 17.10 && Apache2 && Php && Mysqli && Sqlsrv && PhpMyAdmin
+Docker && Ubuntu 18.04 && Apache2 && Php && Mysqli && Sqlsrv && PhpMyAdmin
 
 ## Requirements
 
@@ -9,9 +9,9 @@ Docker && Ubuntu 17.10 && Apache2 && Php && Mysqli && Sqlsrv && PhpMyAdmin
 
 ## About this docker's settings
 
-- ubuntu:17.10
+- ubuntu:18.04
 - apache2
-- php 7.1
+- php 7.2
 - sqlsrv
 - mysqli
 

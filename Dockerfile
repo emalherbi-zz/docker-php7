@@ -33,12 +33,17 @@ RUN echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bash_profile
 RUN echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc
 RUN exec bash
 
+# install nsq
+RUN apt-get update --fix-missing && apt-get install -y libevent-dev
+RUN pecl install nsq
+RUN echo "extension=nsq.so" >> /etc/php/7.2/apache2/php.ini
+
 # install driver sqlsrv
 RUN pecl install sqlsrv
 RUN echo "extension=sqlsrv.so" >> /etc/php/7.2/apache2/php.ini
 
 # install locales
-RUN apt-get install -y locales && echo "en_US.UTF-8 UTF-8" > /etc/locale.gen && locale-gen
+RUN apt-get install -y locales && echo "pt_BR.UTF-8 UTF-8" > /etc/locale.gen && locale-gen
 
 # rewrite
 RUN a2enmod rewrite

@@ -14,6 +14,7 @@ Docker && Ubuntu 18.04 && Apache2 && Php && Mysqli && Sqlsrv && PhpMyAdmin
 - php 7.2
 - sqlsrv
 - mysqli
+- nsq
 
 ## Before installation
 
